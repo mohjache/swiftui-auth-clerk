@@ -43,6 +43,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A32F822F2D7B2DEA0069C533 /* Contexts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Contexts;
+			sourceTree = "<group>";
+		};
+		A32F82392D7B37C50069C533 /* Components */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,8 @@
 		A32F81EF2D7B1D9C0069C533 = {
 			isa = PBXGroup;
 			children = (
+				A32F82392D7B37C50069C533 /* Components */,
+				A32F822F2D7B2DEA0069C533 /* Contexts */,
 				A32F82272D7B29AA0069C533 /* Services */,
 				A32F82262D7B27EF0069C533 /* Screens */,
 				A32F821F2D7B208C0069C533 /* IOC */,
@@ -101,6 +113,8 @@
 				A32F821F2D7B208C0069C533 /* IOC */,
 				A32F82262D7B27EF0069C533 /* Screens */,
 				A32F82272D7B29AA0069C533 /* Services */,
+				A32F822F2D7B2DEA0069C533 /* Contexts */,
+				A32F82392D7B37C50069C533 /* Components */,
 			);
 			name = "swiftu-auth-clerk";
 			packageProductDependencies = (

@@ -10,6 +10,7 @@ import LambdaspireDependencyResolution
 
 func getAppContainer() -> Container {
     let containerBuilder: ContainerBuilder = .init()
+    containerBuilder.singleton(IAuthService.self, assigned(ClerkAuthService.self))
     
     return containerBuilder.build()
 }
