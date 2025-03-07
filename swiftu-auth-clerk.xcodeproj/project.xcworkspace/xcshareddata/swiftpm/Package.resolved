@@ -1,0 +1,42 @@
+{
+  "originHash" : "2853be517600c32a6263bbb715cc488716ee1ff10f7eb74e17a8d74977a1f92f",
+  "pins" : [
+    {
+      "identity" : "lambdaspire-swift-abstractions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-Abstractions",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d93cced99ef1a7703f3809d1e207aeab8586ff35"
+      }
+    },
+    {
+      "identity" : "lambdaspire-swift-dependencyresolution",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fa0b3f338ebd8ed6b3152d88c144978a8dead823"
+      }
+    },
+    {
+      "identity" : "lambdaspire-swiftui-foundations",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/Lambdaspire-SwiftUI-Foundations",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0ccadd620685283523199e64e370c63c81bbb792"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
+        "version" : "509.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

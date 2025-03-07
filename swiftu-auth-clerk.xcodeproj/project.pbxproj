@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A32F820F2D7B1E3A0069C533 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32F820D2D7B1E3A0069C533 /* RootView.swift */; };
+		A32F82102D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32F820E2D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift */; };
+		A32F82122D7B1E3A0069C533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32F820C2D7B1E3A0069C533 /* Assets.xcassets */; };
+		A32F82182D7B1F2B0069C533 /* LambdaspireAbstractions in Frameworks */ = {isa = PBXBuildFile; productRef = A32F82172D7B1F2B0069C533 /* LambdaspireAbstractions */; };
+		A32F821B2D7B1F610069C533 /* LambdaspireDependencyResolution in Frameworks */ = {isa = PBXBuildFile; productRef = A32F821A2D7B1F610069C533 /* LambdaspireDependencyResolution */; };
+		A32F821E2D7B1F870069C533 /* LambdaspireSwiftUIFoundations in Frameworks */ = {isa = PBXBuildFile; productRef = A32F821D2D7B1F870069C533 /* LambdaspireSwiftUIFoundations */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A32F81F82D7B1D9D0069C533 /* swiftu-auth-clerk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftu-auth-clerk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32F820C2D7B1E3A0069C533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A32F820D2D7B1E3A0069C533 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A32F820E2D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftu_auth_clerkApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A32F82142D7B1E430069C533 /* Preview Content */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A32F821F2D7B208C0069C533 /* IOC */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IOC;
+			sourceTree = "<group>";
+		};
+		A32F82262D7B27EF0069C533 /* Screens */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A32F82272D7B29AA0069C533 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A32F81F52D7B1D9D0069C533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32F821B2D7B1F610069C533 /* LambdaspireDependencyResolution in Frameworks */,
+				A32F821E2D7B1F870069C533 /* LambdaspireSwiftUIFoundations in Frameworks */,
+				A32F82182D7B1F2B0069C533 /* LambdaspireAbstractions in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A32F81EF2D7B1D9C0069C533 = {
+			isa = PBXGroup;
+			children = (
+				A32F82272D7B29AA0069C533 /* Services */,
+				A32F82262D7B27EF0069C533 /* Screens */,
+				A32F821F2D7B208C0069C533 /* IOC */,
+				A32F81F92D7B1D9D0069C533 /* Products */,
+				A32F82142D7B1E430069C533 /* Preview Content */,
+				A32F820C2D7B1E3A0069C533 /* Assets.xcassets */,
+				A32F820D2D7B1E3A0069C533 /* RootView.swift */,
+				A32F820E2D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		A32F81F92D7B1D9D0069C533 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A32F81F82D7B1D9D0069C533 /* swiftu-auth-clerk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A32F81F72D7B1D9D0069C533 /* swiftu-auth-clerk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A32F82062D7B1DA10069C533 /* Build configuration list for PBXNativeTarget "swiftu-auth-clerk" */;
+			buildPhases = (
+				A32F81F42D7B1D9D0069C533 /* Sources */,
+				A32F81F52D7B1D9D0069C533 /* Frameworks */,
+				A32F81F62D7B1D9D0069C533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A32F82142D7B1E430069C533 /* Preview Content */,
+				A32F821F2D7B208C0069C533 /* IOC */,
+				A32F82262D7B27EF0069C533 /* Screens */,
+				A32F82272D7B29AA0069C533 /* Services */,
+			);
+			name = "swiftu-auth-clerk";
+			packageProductDependencies = (
+				A32F82172D7B1F2B0069C533 /* LambdaspireAbstractions */,
+				A32F821A2D7B1F610069C533 /* LambdaspireDependencyResolution */,
+				A32F821D2D7B1F870069C533 /* LambdaspireSwiftUIFoundations */,
+			);
+			productName = "swiftu-auth-clerk";
+			productReference = A32F81F82D7B1D9D0069C533 /* swiftu-auth-clerk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A32F81F02D7B1D9C0069C533 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					A32F81F72D7B1D9D0069C533 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = A32F81F32D7B1D9C0069C533 /* Build configuration list for PBXProject "swiftu-auth-clerk" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A32F81EF2D7B1D9C0069C533;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A32F82162D7B1F2B0069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Abstractions" */,
+				A32F82192D7B1F610069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */,
+				A32F821C2D7B1F870069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-SwiftUI-Foundations" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A32F81F92D7B1D9D0069C533 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A32F81F72D7B1D9D0069C533 /* swiftu-auth-clerk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A32F81F62D7B1D9D0069C533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32F82122D7B1E3A0069C533 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A32F81F42D7B1D9D0069C533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32F820F2D7B1E3A0069C533 /* RootView.swift in Sources */,
+				A32F82102D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A32F82042D7B1DA10069C533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A32F82052D7B1DA10069C533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A32F82072D7B1DA10069C533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
+				DEVELOPMENT_TEAM = 2KG9NR622V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mohjache.swiftu-auth-clerk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A32F82082D7B1DA10069C533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
+				DEVELOPMENT_TEAM = 2KG9NR622V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mohjache.swiftu-auth-clerk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A32F81F32D7B1D9C0069C533 /* Build configuration list for PBXProject "swiftu-auth-clerk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32F82042D7B1DA10069C533 /* Debug */,
+				A32F82052D7B1DA10069C533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A32F82062D7B1DA10069C533 /* Build configuration list for PBXNativeTarget "swiftu-auth-clerk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32F82072D7B1DA10069C533 /* Debug */,
+				A32F82082D7B1DA10069C533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A32F82162D7B1F2B0069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Abstractions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-Abstractions";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A32F82192D7B1F610069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A32F821C2D7B1F870069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-SwiftUI-Foundations" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-SwiftUI-Foundations";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A32F82172D7B1F2B0069C533 /* LambdaspireAbstractions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A32F82162D7B1F2B0069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Abstractions" */;
+			productName = LambdaspireAbstractions;
+		};
+		A32F821A2D7B1F610069C533 /* LambdaspireDependencyResolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A32F82192D7B1F610069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */;
+			productName = LambdaspireDependencyResolution;
+		};
+		A32F821D2D7B1F870069C533 /* LambdaspireSwiftUIFoundations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A32F821C2D7B1F870069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-SwiftUI-Foundations" */;
+			productName = LambdaspireSwiftUIFoundations;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A32F81F02D7B1D9C0069C533 /* Project object */;
+}
