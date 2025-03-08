@@ -1,94 +1,55 @@
-//
-//  ContentView.swift
-//  swiftu-auth-clerk
-//
-//  Created by Anaru Herbert on 7/3/2025.
-//
-
-import LambdaspireAbstractions
-import LambdaspireDependencyResolution
-import LambdaspireSwiftUIFoundations
+import Factory
 import SwiftUI
 
-@ViewWithViewModel
-struct RootView {
-    var content: some View {
+struct RootView: View {
+    @StateObject private var vm = RootViewViewModel()
+    var body: some View {
         VStack {
-            if vm.authenticated {
-                HomeScreen() 
+            if !vm.autenticated {
+                Button {
+                    vm.signIn()
+
+                } label: {
+                    Text("Sign In")
+                }
             } else {
-                AuthScreen()
+                Text("hello")
             }
         }
     }
 }
 
-@ViewModel(generateEmpty: true)
-final class RootViewViewModel {
+class RootViewViewModel: ObservableObject {
     @Published private(set) var user: Loadable<User> = .notLoaded
+    @Injected(\.userContext) private var userContext
 
-    private var userContext: UserContext!
+    var autenticated: Bool { user.isLoaded }
 
-    var authenticated: Bool { user.isLoaded }
-    var name: String {
-        self.user.whenLoaded { User in
-            return User.name
-        } else: {
-            ""
-        }
-    }
-
-    init(userContext: UserContext!) {
-        self.userContext = userContext
-    }
-
-    func postInitialise() {
+    init() {
         userContext
             .$user
             .receive(on: DispatchQueue.main)
             .assign(to: &$user)
     }
+
+    func signIn() {
+        userContext.signIn()
+    }
+
 }
 
-#Preview {
-    RootView()
-        .previewContainer { b in
-            b.singleton(UserContext.self)
-            b.singleton(IAuthService.self, assigned(MockAuthService.self))
-        }
-}
-
-@ResolvedScope
-struct WelcomeUserNavTitle : ViewModifier {
-    
-        // @EnvironmentObject might be a more appropriate way to do this
-        // as it will follow the SwiftUI view update cycle better.
-        // However, purely as an example of how to resolve dependencies inline
-        // in a View, here's resolving UserContext and passing it to some
-        // other View's / Modifier's @ObservedObject parameter.
-    @Resolved private var userContext: UserContext
-    
-    func body(content: Content) -> some View {
-        content.modifier(_WelcomeUserNavTitle(userContext: userContext))
+struct LoadingView: View {
+    var body: some View {
+        Text("Hello")
     }
 }
 
-struct _WelcomeUserNavTitle : ViewModifier {
-    
-    @ObservedObject var userContext: UserContext
-    
-    func body(content: Content) -> some View {
-        content.navigationTitle(
-            userContext.user.whenLoaded {
-                "Welcome, \($0.name)"
-            } else: {
-                "Welcome"
-            })
-    }
-}
-
-extension View {
-    func welcomeUserNavTitle() -> some View {
-        modifier(WelcomeUserNavTitle())
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        let _ = Container.shared.authService.register { MockAuthService() }
+            .singleton
+        let _ = Container.shared.userContext.register { UserContext() }
+            .singleton
+        RootView()
     }
 }

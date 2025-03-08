@@ -1,9 +1,12 @@
+//
+//  MockAuthService.swift
+//  swiftu-auth-clerk
+//
+//  Created by Anaru Herbert on 8/3/2025.
+//
 
-import LambdaspireAbstractions
-import LambdaspireDependencyResolution
 
-@Resolvable
-class MockAuthService : IAuthService {
+class MockAuthService : AuthService {
     
     func signIn() async throws -> User { .init(name: "Mock User") }
     

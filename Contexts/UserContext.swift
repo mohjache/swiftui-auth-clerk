@@ -1,18 +1,9 @@
-
+import Factory
 import Combine
-import LambdaspireAbstractions
-import LambdaspireDependencyResolution
-import LambdaspireSwiftUIFoundations
 
-@Resolvable
 class UserContext : ObservableObject {
-    @Published private(set) var user: Loadable<User> = .notLoaded
-    
-    private let auth: IAuthService
-    
-    init(auth: IAuthService) {
-        self.auth = auth
-    }
+    @Published private(set) var user : Loadable<User> = .notLoaded
+    @Injected(\.authService) private var auth
     
     func signIn() {
         user = .loading
@@ -25,18 +16,8 @@ class UserContext : ObservableObject {
         }
     }
     
-    func signOut() {
-        user = .loading
-        Task {
-            do {
-                try await auth.signOut()
-                user = .notLoaded
-            } catch {
-                user = .error(error)
-            }
-        }
-    }
 }
+
 
 enum Loadable<T> {
     case notLoaded

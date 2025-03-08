@@ -1,40 +1,40 @@
 {
-  "originHash" : "2853be517600c32a6263bbb715cc488716ee1ff10f7eb74e17a8d74977a1f92f",
+  "originHash" : "e6155bcb55384e0fcde0a157fe2ab6f9ec771195d96ecdac0026f000177a4685",
   "pins" : [
     {
-      "identity" : "lambdaspire-swift-abstractions",
+      "identity" : "clerk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-Abstractions",
+      "location" : "https://github.com/clerk/clerk-ios",
       "state" : {
-        "branch" : "main",
-        "revision" : "d93cced99ef1a7703f3809d1e207aeab8586ff35"
+        "revision" : "f8a5b1b474cf2f9c8abcbde9a293a11dd667b9ba",
+        "version" : "0.49.0"
       }
     },
     {
-      "identity" : "lambdaspire-swift-dependencyresolution",
+      "identity" : "factory",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution",
+      "location" : "https://github.com/hmlongco/Factory",
       "state" : {
-        "branch" : "main",
-        "revision" : "fa0b3f338ebd8ed6b3152d88c144978a8dead823"
+        "revision" : "fb04a8918848e413d3921d346a23bae7f81088d9",
+        "version" : "2.4.3"
       }
     },
     {
-      "identity" : "lambdaspire-swiftui-foundations",
+      "identity" : "get",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lambdaspire/Lambdaspire-SwiftUI-Foundations",
+      "location" : "https://github.com/kean/Get",
       "state" : {
-        "branch" : "main",
-        "revision" : "0ccadd620685283523199e64e370c63c81bbb792"
+        "revision" : "31249885da1052872e0ac91a2943f62567c0d96d",
+        "version" : "2.2.1"
       }
     },
     {
-      "identity" : "swift-syntax",
+      "identity" : "simplekeychain",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-syntax.git",
+      "location" : "https://github.com/auth0/SimpleKeychain",
       "state" : {
-        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
-        "version" : "509.1.1"
+        "revision" : "b694f155907b189bc82e93586695a26f558c742f",
+        "version" : "1.2.0"
       }
     }
   ],

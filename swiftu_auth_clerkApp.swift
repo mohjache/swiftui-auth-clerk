@@ -5,21 +5,48 @@
 //  Created by Anaru Herbert on 7/3/2025.
 //
 
-
-import LambdaspireAbstractions
-import LambdaspireDependencyResolution
-import LambdaspireSwiftUIFoundations
+import Clerk
 import SwiftUI
-
+import Factory
 @main
 struct swiftu_auth_clerkApp: App {
-    private let rootScope: DependencyResolutionScope = getAppContainer()
-    
+    private var clerk = Clerk.shared
     var body: some Scene {
         WindowGroup {
-            RootView()
-                .resolving(from: rootScope)
-        
-        }
+            ZStack {
+                if clerk.isLoaded {
+                    RootView()
+                } else {
+                    LoadingView()
+                }
+            }
+                .environment(clerk)
+                .task {
+                    clerk.configure(publishableKey: "pk_test_a25vd24tbWFuLTIwLmNsZXJrLmFjY291bnRzLmRldiQ")
+                    try? await clerk.load()
+                }
+        }        
     }
+    
 }
+
+extension Container {
+    var authService: Factory<AuthService> {
+        self { ClerkAuthService() }.singleton
+    }
+    
+    var userContext : Factory<UserContext> {
+        self{UserContext()}.singleton
+    }
+    
+}
+
+struct User  {
+    var name: String
+}
+
+
+
+
+
+

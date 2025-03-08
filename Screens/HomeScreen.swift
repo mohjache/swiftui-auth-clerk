@@ -1,14 +1,8 @@
-
 import SwiftUI
-import LambdaspireAbstractions
-import LambdaspireDependencyResolution
-import LambdaspireSwiftUIFoundations
 
-
-@ViewWithViewModel
-struct HomeScreen {
+struct HomeScreen : View{
     var data = ["Hello", "World"]
-    var content : some View {
+    var body: some View {
         NavigationStack {
             List {
                 Section {
@@ -17,25 +11,12 @@ struct HomeScreen {
                     }
                 }
             }
-            .welcomeUserNavTitle()
+
         }
     }
 }
+
 
 #Preview {
     HomeScreen()
-        .previewContainer { b in
-            b.transient(IAuthService.self, assigned(MockAuthService.self))
-        } after: { c in
-            c.resolve(UserContext.self).signIn()
-        }
-}
-
-@ViewModel(generateEmpty: true)
-final class HomeScreenViewModel {
-    private var userContext: UserContext!
-    
-    func signOut() {
-        userContext.signOut()
-    }
 }
