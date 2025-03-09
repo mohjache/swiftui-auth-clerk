@@ -9,9 +9,13 @@ struct swiftu_auth_clerkApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                RootView()
+                if clerk.isLoaded {
+                    RootView()
+                } else {
+                    Text("Loading")
+                }
+
             }
-            //.environment(clerk)
             .task {
                 clerk.configure(
                     publishableKey:
@@ -37,16 +41,31 @@ extension Container {
 protocol AuthService {
     func signIn() async throws -> User
     func signOut() async throws
+    func getCurrentUser() async -> User?;
 }
 
 @MainActor
 public class ClerkAuthService: AuthService {
+    
+    
     private var clerk: Clerk = Clerk.shared
+    
+    func getCurrentUser()  -> User? {
+        if clerk.session != nil {
+            let user = clerk.user
+            return .init(name: user?.firstName ?? "User")
+        }
+        
+        return nil
+    }
+    
 
     func signIn() async throws -> User {
 
         let signInStrategy = try await SignIn.create(
             strategy: .oauth(provider: .google))
+
+        print(signInStrategy)
 
         try await signInStrategy.authenticateWithRedirect(
             prefersEphemeralWebBrowserSession: false)
@@ -55,22 +74,30 @@ public class ClerkAuthService: AuthService {
         let result = User(name: authenticatedUser.firstName ?? "N/A")
 
         return result
+
     }
 
     func signOut() async throws {
-        // yep
+        try await clerk.signOut()
     }
 
 }
 
 @MainActor
 public class MockAuthService: AuthService {
+    private var testUser : User? = nil
+    
+    func getCurrentUser() async -> User? {
+        return testUser
+    }
+    
     func signIn() async throws -> User {
-        return .init(name: "Test User")
+        testUser = .init(name: "Test User")
+        return testUser!
     }
 
     func signOut() async throws {
-        //yolo
+        testUser = nil
     }
 }
 
