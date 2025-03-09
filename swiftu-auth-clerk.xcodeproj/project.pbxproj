@@ -26,21 +26,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A32F821F2D7B208C0069C533 /* IOC */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = IOC;
-			sourceTree = "<group>";
-		};
-		A32F82262D7B27EF0069C533 /* Screens */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		A32F82272D7B29AA0069C533 /* Services */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Services;
-			sourceTree = "<group>";
-		};
 		A32F822F2D7B2DEA0069C533 /* Contexts */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Contexts;
@@ -49,6 +34,11 @@
 		A32F82392D7B37C50069C533 /* Components */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A32F82522D7C7D5D0069C533 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -68,11 +58,9 @@
 		A32F81EF2D7B1D9C0069C533 = {
 			isa = PBXGroup;
 			children = (
+				A32F82522D7C7D5D0069C533 /* Services */,
 				A32F82392D7B37C50069C533 /* Components */,
 				A32F822F2D7B2DEA0069C533 /* Contexts */,
-				A32F82272D7B29AA0069C533 /* Services */,
-				A32F82262D7B27EF0069C533 /* Screens */,
-				A32F821F2D7B208C0069C533 /* IOC */,
 				A32F81F92D7B1D9D0069C533 /* Products */,
 				A32F82142D7B1E430069C533 /* Preview Content */,
 				A32F820C2D7B1E3A0069C533 /* Assets.xcassets */,
@@ -106,11 +94,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				A32F82142D7B1E430069C533 /* Preview Content */,
-				A32F821F2D7B208C0069C533 /* IOC */,
-				A32F82262D7B27EF0069C533 /* Screens */,
-				A32F82272D7B29AA0069C533 /* Services */,
 				A32F822F2D7B2DEA0069C533 /* Contexts */,
 				A32F82392D7B37C50069C533 /* Components */,
+				A32F82522D7C7D5D0069C533 /* Services */,
 			);
 			name = "swiftu-auth-clerk";
 			packageProductDependencies = (

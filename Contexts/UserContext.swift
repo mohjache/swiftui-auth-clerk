@@ -1,23 +1,34 @@
 import Factory
-import Combine
+import SwiftUI
+
 
 class UserContext : ObservableObject {
-    @Published private(set) var user : Loadable<User> = .notLoaded
-    @Injected(\.authService) private var auth
+    @Injected(\.auth) private var authService
+    @Published var loadedUser: Loadable<User> = .notLoaded
     
     func signIn() {
-        user = .loading
+        loadedUser = .loading
         Task {
             do {
-                user = .loaded(try await auth.signIn())
+                loadedUser = .loaded(try await authService.signIn())
             } catch {
-                user = .error(error)
+                loadedUser = .error(error)
             }
         }
     }
-    
-}
 
+    func signOut() {
+        loadedUser = .loading
+        Task {
+            do {
+                try await authService.signOut()
+                loadedUser = .notLoaded
+            } catch {
+                loadedUser = .error(error)
+            }
+        }
+    }
+}
 
 enum Loadable<T> {
     case notLoaded
@@ -27,11 +38,15 @@ enum Loadable<T> {
 }
 
 extension Loadable {
-    
+
     var isLoaded: Bool {
-        whenLoaded { _ in true } else: { false }
+        whenLoaded { _ in
+            true
+        } else: {
+            false
+        }
     }
-    
+
     func whenLoaded<R>(_ fn: (T) -> R, else efn: () -> R) -> R {
         if case let .loaded(t) = self {
             return fn(t)
