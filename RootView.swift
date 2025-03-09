@@ -9,14 +9,8 @@ struct RootView: View {
             if vm.loaded {
                 if vm.authenticated {
                     TabView {
-                        VStack {
-                            Text(
-                                "Hello \(vm.user.whenLoaded({$0.name}, else: {""}))"
-                            )
-                            Button("Sign out") {
-                                vm.signOut()
-                            }
-                        }.tabItem {
+                        Dashboard()
+                            .tabItem {
                             Label(
                                 "Dashboard",
                                 systemImage:

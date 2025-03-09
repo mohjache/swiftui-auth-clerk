@@ -20,6 +20,7 @@ class UserContext: ObservableObject {
     }
 
     func signIn() {
+        print("signing in")
         loadedUser = .loading
         Task {
             do {
