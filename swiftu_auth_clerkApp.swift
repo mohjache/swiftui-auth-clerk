@@ -1,5 +1,4 @@
 import Clerk
-import Factory
 import SwiftUI
 
 @main
@@ -27,20 +26,4 @@ struct swiftu_auth_clerkApp: App {
         }
     }
 
-}
-
-extension Container {
-    var auth: Factory<AuthService> {
-        self { @MainActor in ClerkAuthService() }.singleton
-    }
-    var userContext: Factory<UserContext> {
-        self { UserContext() }.singleton
-    }
-}
-
-
-
-
-struct User {
-    var name: String
 }

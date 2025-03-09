@@ -41,6 +41,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A32F82692D7DD6FA0069C533 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A32F826A2D7DD7200069C533 /* IoC */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IoC;
+			sourceTree = "<group>";
+		};
+		A32F826D2D7DD7640069C533 /* Screens */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,9 @@
 		A32F81EF2D7B1D9C0069C533 = {
 			isa = PBXGroup;
 			children = (
+				A32F826D2D7DD7640069C533 /* Screens */,
+				A32F826A2D7DD7200069C533 /* IoC */,
+				A32F82692D7DD6FA0069C533 /* Models */,
 				A32F82632D7DD67B0069C533 /* Services */,
 				A32F82392D7B37C50069C533 /* Components */,
 				A32F822F2D7B2DEA0069C533 /* Contexts */,
@@ -97,6 +115,9 @@
 				A32F822F2D7B2DEA0069C533 /* Contexts */,
 				A32F82392D7B37C50069C533 /* Components */,
 				A32F82632D7DD67B0069C533 /* Services */,
+				A32F82692D7DD6FA0069C533 /* Models */,
+				A32F826A2D7DD7200069C533 /* IoC */,
+				A32F826D2D7DD7640069C533 /* Screens */,
 			);
 			name = "swiftu-auth-clerk";
 			packageProductDependencies = (
