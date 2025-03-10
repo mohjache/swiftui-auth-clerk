@@ -53,9 +53,6 @@ extension RootView {
             userContext.signIn()
         }
 
-        func signOut() {
-            userContext.signOut()
-        }
 
         func getCurrentUSer() {
             userContext.getCurrentUser()
