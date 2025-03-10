@@ -37,7 +37,6 @@ struct Dashboard : View {
 
 extension Dashboard {
     class ViewModel : ObservableObject {
-        @Published private(set) var user: Loadable<User> = .notLoaded
         @Injected(\.userContext) private var userContext   
     
         func signOut() {
