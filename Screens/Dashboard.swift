@@ -3,6 +3,8 @@ import Factory
 
 struct Dashboard : View {
     @StateObject private var vm = ViewModel()
+    @Injected(\.userContext) private var userContext
+    
     private var data = ["Hello", "World"]
     var body: some View {
         NavigationStack {
@@ -14,7 +16,7 @@ struct Dashboard : View {
                 }
             }
             .navigationTitle(
-                vm.user.whenLoaded {
+                userContext.loadedUser.whenLoaded {
                     "Welcome, \($0.name)"
                 } else: {
                     "Welcome"
@@ -37,14 +39,7 @@ extension Dashboard {
     class ViewModel : ObservableObject {
         @Published private(set) var user: Loadable<User> = .notLoaded
         @Injected(\.userContext) private var userContext   
-        
-        init() {
-            userContext
-                .$loadedUser
-                .receive(on: DispatchQueue.main)
-                .assign(to: &$user)
-        }
-        
+    
         func signOut() {
             userContext.signOut()
         }
@@ -54,13 +49,10 @@ extension Dashboard {
 struct RootView_Preview : PreviewProvider {
     static var previews: some View {
        
-        let _ = Container.shared.auth.register {@MainActor in MockAuthService()}
-        let _  = Container.shared.userContext.register {UserContext()}
-        let context = Container.shared.userContext()
+        let _ = Container.shared.auth.register {@MainActor in MockAuthService()}.singleton
+        let _  = Container.shared.userContext.register {UserContext()}.singleton
+        let _ = Container.shared.userContext().signIn()
 
         Dashboard()
-            .task {
-                context.signIn()
-            }
     }
 }
