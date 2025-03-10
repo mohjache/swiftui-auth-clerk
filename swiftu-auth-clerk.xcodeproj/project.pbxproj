@@ -11,6 +11,7 @@
 		A32F82102D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32F820E2D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift */; };
 		A32F82122D7B1E3A0069C533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32F820C2D7B1E3A0069C533 /* Assets.xcassets */; };
 		A32F82422D7BE4C00069C533 /* Clerk in Frameworks */ = {isa = PBXBuildFile; productRef = A32F82412D7BE4C00069C533 /* Clerk */; };
+		A32F82882D7EF0E50069C533 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A32F82872D7EF0E50069C533 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,8 @@
 		A32F820C2D7B1E3A0069C533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32F820D2D7B1E3A0069C533 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A32F820E2D7B1E3A0069C533 /* swiftu_auth_clerkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftu_auth_clerkApp.swift; sourceTree = "<group>"; };
+		A32F82872D7EF0E50069C533 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A32F82892D7EF1490069C533 /* swiftu-auth-clerk-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "swiftu-auth-clerk-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -73,6 +76,8 @@
 		A32F81EF2D7B1D9C0069C533 = {
 			isa = PBXGroup;
 			children = (
+				A32F82892D7EF1490069C533 /* swiftu-auth-clerk-Info.plist */,
+				A32F82872D7EF0E50069C533 /* Config.xcconfig */,
 				A32F826D2D7DD7640069C533 /* Screens */,
 				A32F826A2D7DD7200069C533 /* IoC */,
 				A32F82692D7DD6FA0069C533 /* Models */,
@@ -169,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32F82882D7EF0E50069C533 /* Config.xcconfig in Resources */,
 				A32F82122D7B1E3A0069C533 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +315,7 @@
 		};
 		A32F82072D7B1DA10069C533 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A32F82872D7EF0E50069C533 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +325,7 @@
 				DEVELOPMENT_TEAM = 2KG9NR622V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swiftu-auth-clerk-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -338,6 +346,7 @@
 		};
 		A32F82082D7B1DA10069C533 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A32F82872D7EF0E50069C533 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +356,7 @@
 				DEVELOPMENT_TEAM = 2KG9NR622V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swiftu-auth-clerk-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

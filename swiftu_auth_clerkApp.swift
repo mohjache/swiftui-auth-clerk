@@ -18,7 +18,7 @@ struct swiftu_auth_clerkApp: App {
             .task {
                 clerk.configure(
                     publishableKey:
-                        "pk_test_a25vd24tbWFuLTIwLmNsZXJrLmFjY291bnRzLmRldiQ")
+                        ApplicationConfig.clerkApiKey)
                 try? await clerk.load()
 
             }

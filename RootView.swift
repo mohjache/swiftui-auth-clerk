@@ -24,7 +24,7 @@ struct RootView: View {
                     
                 }
             }
-        }.onAppear { self.vm.getCurrentUSer() }
+        }.onAppear { self.vm.getCurrentUser() }
     }
 
 }
@@ -54,7 +54,7 @@ extension RootView {
         }
 
 
-        func getCurrentUSer() {
+        func getCurrentUser() {
             userContext.getCurrentUser()
         }
     }
