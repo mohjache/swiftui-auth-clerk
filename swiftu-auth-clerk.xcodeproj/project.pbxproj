@@ -12,6 +12,8 @@
 		A32F82122D7B1E3A0069C533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32F820C2D7B1E3A0069C533 /* Assets.xcassets */; };
 		A32F82422D7BE4C00069C533 /* Clerk in Frameworks */ = {isa = PBXBuildFile; productRef = A32F82412D7BE4C00069C533 /* Clerk */; };
 		A32F82882D7EF0E50069C533 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A32F82872D7EF0E50069C533 /* Config.xcconfig */; };
+		A32F828F2D7EFE940069C533 /* LambdaspireDependencyResolution in Frameworks */ = {isa = PBXBuildFile; productRef = A32F828E2D7EFE940069C533 /* LambdaspireDependencyResolution */; };
+		A32F82922D7EFFF80069C533 /* LambdaspireSwiftUIFoundations in Frameworks */ = {isa = PBXBuildFile; productRef = A32F82912D7EFFF80069C533 /* LambdaspireSwiftUIFoundations */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32F828F2D7EFE940069C533 /* LambdaspireDependencyResolution in Frameworks */,
+				A32F82922D7EFFF80069C533 /* LambdaspireSwiftUIFoundations in Frameworks */,
 				A32F82422D7BE4C00069C533 /* Clerk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +131,8 @@
 			name = "swiftu-auth-clerk";
 			packageProductDependencies = (
 				A32F82412D7BE4C00069C533 /* Clerk */,
+				A32F828E2D7EFE940069C533 /* LambdaspireDependencyResolution */,
+				A32F82912D7EFFF80069C533 /* LambdaspireSwiftUIFoundations */,
 			);
 			productName = "swiftu-auth-clerk";
 			productReference = A32F81F82D7B1D9D0069C533 /* swiftu-auth-clerk.app */;
@@ -158,6 +164,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A32F82402D7BE4C00069C533 /* XCRemoteSwiftPackageReference "clerk-ios" */,
+				A32F828D2D7EFE930069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */,
+				A32F82902D7EFFF80069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-SwiftUI-Foundations" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A32F81F92D7B1D9D0069C533 /* Products */;
@@ -407,6 +415,22 @@
 				minimumVersion = 0.49.0;
 			};
 		};
+		A32F828D2D7EFE930069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A32F82902D7EFFF80069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-SwiftUI-Foundations" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-SwiftUI-Foundations";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -414,6 +438,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A32F82402D7BE4C00069C533 /* XCRemoteSwiftPackageReference "clerk-ios" */;
 			productName = Clerk;
+		};
+		A32F828E2D7EFE940069C533 /* LambdaspireDependencyResolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A32F828D2D7EFE930069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */;
+			productName = LambdaspireDependencyResolution;
+		};
+		A32F82912D7EFFF80069C533 /* LambdaspireSwiftUIFoundations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A32F82902D7EFFF80069C533 /* XCRemoteSwiftPackageReference "Lambdaspire-SwiftUI-Foundations" */;
+			productName = LambdaspireSwiftUIFoundations;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

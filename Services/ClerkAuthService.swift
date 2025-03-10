@@ -1,8 +1,10 @@
 import Clerk
+import LambdaspireDependencyResolution
+import LambdaspireAbstractions
 
 @MainActor
-public class ClerkAuthService: AuthService {
-    
+@Resolvable
+class ClerkAuthService: AuthService {
     
     private var clerk: Clerk = Clerk.shared
     
@@ -20,8 +22,6 @@ public class ClerkAuthService: AuthService {
 
         let signInStrategy = try await SignIn.create(
             strategy: .oauth(provider: .google))
-
-        print(signInStrategy)
 
         try await signInStrategy.authenticateWithRedirect(
             prefersEphemeralWebBrowserSession: false)

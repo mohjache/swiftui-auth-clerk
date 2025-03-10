@@ -1,10 +1,18 @@
-import Factory
 import SwiftUI
+import LambdaspireAbstractions
+import LambdaspireDependencyResolution
 
+@Resolvable
 class UserContext: ObservableObject {
-    @Injected(\.auth) private var authService
+    
     @Published var loadedUser: Loadable<User> = .notLoaded
     @Published var loaded : Bool = false
+    
+    private let authService: AuthService
+    
+    init(authService: AuthService) {
+        self.authService = authService
+    }
     
     func getCurrentUser() {
         Task {

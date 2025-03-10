@@ -1,70 +1,75 @@
 import Clerk
-import Factory
+import LambdaspireAbstractions
+import LambdaspireDependencyResolution
+import LambdaspireSwiftUIFoundations
 import SwiftUI
 
-struct RootView: View {
-    @StateObject private var vm = ViewModel()
-    var body: some View {
+@ViewWithViewModel
+struct RootView {
+    var content: some View {
         ZStack {
             if vm.loaded {
                 if vm.authenticated {
                     TabView {
-                        Dashboard()
-                            .tabItem {
-                            Label(
-                                "Dashboard",
-                                systemImage:
-                                    "bolt.fill")
-                        }
+                        //                        Dashboard()
+                        //                            .tabItem {
+                        //                            Label(
+                        //                                "Dashboard",
+                        //                                systemImage:
+                        //                                    "bolt.fill")
+                        Text("Hello")
                     }
-                } else {
-                    Button("Sign In") {
-                        vm.signIn()
-                    }
-                    
                 }
+            } else {
+                Button("Sign In") {
+                    vm.signIn()
+                }
+
             }
+
         }.onAppear { self.vm.getCurrentUser() }
     }
 
 }
 
-extension RootView {
-    class ViewModel: ObservableObject {
-        @Published private(set) var user: Loadable<User> = .notLoaded
-        @Published private(set) var loaded: Bool = false
-        @Injected(\.userContext) private var userContext
+@ViewModel(generateEmpty: true)
+final class RootViewViewModel {
+    @Published private(set) var user: Loadable<User> = .notLoaded
+    @Published private(set) var loaded: Bool = false
+    private var userContext: UserContext!
 
-        var authenticated: Bool { user.isLoaded }
+    var authenticated: Bool { user.isLoaded }
 
-        init() {
-            userContext
-                .$loadedUser
-                .receive(on: DispatchQueue.main)
-                .assign(to: &$user)
-            
-            userContext
-                .$loaded
-                .receive(on: DispatchQueue.main)
-                .assign(to: &$loaded)
-        }
-
-        func signIn() {
-            userContext.signIn()
-        }
-
-
-        func getCurrentUser() {
-            userContext.getCurrentUser()
-        }
+    init(userContext: UserContext) {
+        self.userContext = userContext
     }
+
+    func signIn() {
+        userContext.signIn()
+    }
+
+    func getCurrentUser() {
+        userContext.getCurrentUser()
+    }
+    
+    func postInitalise() {
+        userContext
+            .$loadedUser
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$user)
+        
+        userContext
+            .$loaded
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$loaded)
+    }
+
 }
 
-struct RootView_Previews: PreviewProvider {
-    static var previews: some View {
-        let _ = Container.shared.auth.register { @MainActor in MockAuthService()
+#Preview {
+    RootView()
+        .previewContainer { b in
+            b.singleton(UserContext.self)
+            b.singleton(AuthService.self, assigned(MockAuthService.self))
         }
-        let _ = Container.shared.userContext.register { UserContext() }
-        RootView()
-    }
 }

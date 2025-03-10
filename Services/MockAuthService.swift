@@ -1,5 +1,9 @@
+import LambdaspireDependencyResolution
+import LambdaspireAbstractions
+
 @MainActor
-public class MockAuthService: AuthService {
+@Resolvable
+class MockAuthService: AuthService {
     private var testUser : User? = nil
     
     func getCurrentUser() async -> User? {
