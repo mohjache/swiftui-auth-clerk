@@ -8,7 +8,7 @@
 - [x] Add on first render for root view ability to fetch current session/user.
 - [x] Wire up dashboard screen with mock data
 - [x] Get user context user updates without needing to sub to changes inside view model (just inject into view and view will update when changes occur on user).
-- [ ] Scaffold data context and services (real and mock) to 'fetch' data.
+- [x] Scaffold data context and services (real and mock) to 'fetch' data.
 - [ ] Implement actual 'API' to retrieve that data
 - [ ] Try to get an API that has auth to verify token we get from clerk
 - [ ] Add middleware onto api requests to get token from auth service
